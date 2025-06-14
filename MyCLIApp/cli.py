@@ -4,7 +4,7 @@ from core import Calculator
 
 def main():
     parser = argparse.ArgumentParser(description="Your Cli Tool")
-    parser.add_argument("operation", choices=["+", "-", "x", "/"])
+    parser.add_argument("operation", choices=["+", "-", "x", "/", "xx"])
     parser.add_argument("numbers", nargs="+", type= float, help="Numbers To Work On")
     args = parser.parse_args()
 
@@ -16,6 +16,8 @@ def main():
         print(f"Result of Subtraction: {calculator.subtract()}")
     elif args.operation == "x":
         print(f"Result of Multiplication: {calculator.multiply()}")
+    elif args.operation == "xx":
+        print(f"Result of Exponentiation: {calculator.exponentiation()}")
     elif args.operation == "/":
         counter = 0
         for number in range(1,len(args.numbers)):

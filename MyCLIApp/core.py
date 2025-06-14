@@ -25,4 +25,11 @@ class Calculator:
         for number in range(1,len(self.numbers)): 
             total /= self.numbers[number]
         return total
-        
+    
+    def exponentiation(self):
+        total = self.numbers[0]
+        for number in range(1,len(self.numbers)): 
+            total = total ** self.numbers[number]
+        return total
+    
+    # 4 1 2
